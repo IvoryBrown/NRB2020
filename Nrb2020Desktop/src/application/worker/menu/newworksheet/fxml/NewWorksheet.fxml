@@ -111,7 +111,7 @@
             </HBox>
          </children>
       </AnchorPane>
-      <TableView fx:id="clientTableView1" editable="true" layoutX="180.0" layoutY="353.0" prefHeight="308.0" prefWidth="1030.0" styleClass="m-textfield" stylesheets="@../../../../css/Table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0">
+      <TableView fx:id="worksheetTableView" editable="true" layoutX="180.0" layoutY="353.0" prefHeight="308.0" prefWidth="1030.0" styleClass="m-textfield" stylesheets="@../../../../css/Table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="364.0">
          <placeholder>
             <Label text="Nincs adat kérlek nyomd meg a frissítés gombot." />
          </placeholder>

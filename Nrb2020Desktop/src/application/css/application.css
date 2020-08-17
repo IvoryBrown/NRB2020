@@ -143,5 +143,22 @@
 	-fx-background-color: #1b9891;
 }
 
+/*Combo-box */
 
+.combo-box-base {
+    -fx-background-color:#20B2AA;
+   -fx-background-radius: 5.0;
+}
+
+.combo-box .list-cell {
+    -fx-background: #20B2AA;
+    -fx-background-color: #20B2AA;
+    -fx-text-fill: white;
+    -fx-background-radius: 5.0;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #20B2AA;
+    -fx-background-insets: 0, 1;
+}   
 

@@ -6,6 +6,7 @@ public class NewWorksheet {
 
 	private final SimpleStringProperty worksheetId;
 	private final SimpleStringProperty clientId;
+	private final SimpleStringProperty clientName;
 	private final SimpleStringProperty worksheetNumber;
 	private final SimpleStringProperty worksheetStartDate;
 	private final SimpleStringProperty worksheetEndDate;
@@ -19,6 +20,7 @@ public class NewWorksheet {
 			String worksheetComment) {
 		this.worksheetId = new SimpleStringProperty(String.valueOf(worksheetId));
 		this.clientId = new SimpleStringProperty(String.valueOf(clientId));
+		this.clientName = new SimpleStringProperty("");
 		this.worksheetNumber = new SimpleStringProperty(worksheetNumber);
 		this.worksheetStartDate = new SimpleStringProperty(worksheetStartDate);
 		this.worksheetEndDate = new SimpleStringProperty(worksheetEndDate);
@@ -28,16 +30,34 @@ public class NewWorksheet {
 		this.worksheetComment = new SimpleStringProperty(worksheetComment);
 	}
 
+	// munkalap add
 	public NewWorksheet(String clientId, String worksheetNumber, String worksheetStartDate, String worksheetStatus,
 			String worksheetBillable, String worksheetComment) {
 		this.worksheetId = new SimpleStringProperty(String.valueOf(""));
 		this.clientId = new SimpleStringProperty(clientId);
+		this.clientName = new SimpleStringProperty("");
 		this.worksheetNumber = new SimpleStringProperty(worksheetNumber);
 		this.worksheetStartDate = new SimpleStringProperty(worksheetStartDate);
 		this.worksheetEndDate = new SimpleStringProperty("");
 		this.worksheetStatus = new SimpleStringProperty(worksheetStatus);
 		this.worksheetBillable = new SimpleStringProperty(worksheetBillable);
 		this.worksheetBillableData = new SimpleStringProperty("");
+		this.worksheetComment = new SimpleStringProperty(worksheetComment);
+	}
+
+	// Munkalap sql
+	public NewWorksheet(String clientName, Integer worksheetId, String worksheetNumber, String worksheetStartDate,
+			String worksheetEndDate, String worksheetStatus, String worksheetBillable, String worksheetBillableData,
+			String worksheetComment) {
+		this.clientName = new SimpleStringProperty(clientName);
+		this.worksheetId = new SimpleStringProperty(String.valueOf(worksheetId));
+		this.clientId = new SimpleStringProperty(String.valueOf(""));
+		this.worksheetNumber = new SimpleStringProperty(worksheetNumber);
+		this.worksheetStartDate = new SimpleStringProperty(worksheetStartDate);
+		this.worksheetEndDate = new SimpleStringProperty(worksheetEndDate);
+		this.worksheetStatus = new SimpleStringProperty(worksheetStatus);
+		this.worksheetBillable = new SimpleStringProperty(worksheetBillable);
+		this.worksheetBillableData = new SimpleStringProperty(worksheetBillableData);
 		this.worksheetComment = new SimpleStringProperty(worksheetComment);
 	}
 
@@ -55,6 +75,14 @@ public class NewWorksheet {
 
 	public void setClientId(String clientId) {
 		this.clientId.set(clientId);
+	}
+
+	public String getClientName() {
+		return this.clientName.get();
+	}
+
+	public void setClientName(String clientName) {
+		this.clientName.set(clientName);
 	}
 
 	public String getWorksheetNumber() {
