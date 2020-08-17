@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1600.0" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.menu.controller.ClientMenuController">
+   <children>
+      <AnchorPane prefHeight="780.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="50.0" layoutY="50.0" prefHeight="651.0" prefWidth="250.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox fx:id="clientMenuVBox" prefHeight="650.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="250.0" styleClass="menu-label" text="PARTNEREK" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+            <AnchorPane fx:id="clientPane" layoutX="357.0" layoutY="50.0" prefHeight="650.0" prefWidth="1189.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <fx:include source="../client/fxml/Client.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="purveyorPane" layoutX="357.0" layoutY="50.0" prefHeight="650.0" prefWidth="1189.0" visible="false" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

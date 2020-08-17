@@ -1,0 +1,147 @@
+/* Menu*/
+
+
+.menu-pane{
+	-fx-background-color: #20B2AA;
+}
+
+/* Button-Bar*/
+.menu-button{
+	-fx-background-color: transparent;
+	-fx-text-fill: white; 
+	-fx-font-size: 20.0;
+	-fx-font-family: "Arial Black";
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #1b9891;
+	-fx-background-radius: 5.0;
+}
+
+.menu-button:focused {
+    -fx-background-color: #1b9891;
+}
+
+/* Button-Bar*/
+.menu-all-button{
+	-fx-background-color: transparent;
+	-fx-text-fill: white; 
+	-fx-font-size: 20.0;
+	-fx-font-family: "Arial Black";
+	-fx-font-weight: bold;
+}
+
+.menu-all-button:hover{
+	-fx-text-fill:  #1b9891;
+	-fx-background-radius: 5.0;
+}
+
+.menu-all-button:hover{
+	-fx-text-fill:  #1b9891;
+}
+
+/* Identification button*/
+.generator-button{
+	-fx-background-color: #20B2AA;
+	-fx-text-fill: white; 
+    -fx-background-radius: 30.0;
+    -fx-font-weight: bold;
+}
+
+.generator-button:hover{
+	-fx-text-fill:  #1b9891;
+}
+
+/* Background Image*/
+.pane-background-image{
+    -fx-background-image: url("../image/background.jpg");
+    -fx-background-position: center center;
+}
+
+/* all Menu Label */
+.menu-label{
+	-fx-background-color: #20B2AA;
+	-fx-text-fill: white; 
+	-fx-font-size: 22.0;
+	-fx-font-family: "Arial Black";
+	-fx-font-weight: bold;
+}
+
+/* all menu tree view */
+.tree-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #1b9891;
+}
+
+.tree-view .tree-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white; 
+	-fx-font-size: 16.0;
+	-fx-font-family: "Arial Black";
+	-fx-font-weight: bold;
+}
+
+.tree-view .tree-cell:selected {
+     -fx-background-color: #1b9891;
+     -fx-font-size: 18.0;
+}
+
+.tree-view:focused .tree-cell:focused {
+    -fx-background-color:#1b9891; 
+}
+
+/* AnchorPane border */
+.pane-border{
+     -fx-background-color: #bef4f1;
+     -fx-border-color: #1b9891;
+}
+
+/*Menu setting all menu*/
+/*Menu label*/
+
+.m-label{
+	-fx-text-fill: #136c68; 
+	-fx-font-size: 16.0;
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+
+/*TextField name*/
+
+.m-textfield{
+	-fx-background-color: #e9fbfa;
+	-fx-border-color: #1b9891;
+	-fx-font-size: 16.0;
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+
+/*TextArea name*/
+.m-textarea{
+	 -fx-control-inner-background:#e9fbfa;
+	 -fx-border-color: #1b9891;
+	 -fx-font-size: 16.0;
+	 -fx-font-family: "Arial";
+	 -fx-font-weight: bold;
+}
+
+
+
+/*Save Button */
+
+.save-button{
+	-fx-background-color: #20B2AA;
+	-fx-text-fill: white; 
+	-fx-font-size: 16.0;
+	-fx-font-family: "Arial Black";
+	-fx-font-weight: bold;
+	-fx-background-radius: 5.0;
+}
+
+.save-button:hover{
+	-fx-background-color: #1b9891;
+}
+
+
+

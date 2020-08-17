@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1600.0" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.home.menu.controller.HomeMenuController">
+   <children>
+      <AnchorPane prefHeight="780.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="50.0" layoutY="50.0" prefHeight="651.0" prefWidth="250.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox fx:id="homeMenuVBox" prefHeight="650.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="250.0" styleClass="menu-label" text="FÖOLDAL" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="homePane" layoutX="357.0" layoutY="50.0" prefHeight="650.0" prefWidth="1189.0" styleClass="pane-border" visible="false" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <HBox layoutX="2.0" layoutY="2.0" prefHeight="32.0" prefWidth="1198.0" AnchorPane.bottomAnchor="617.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="2500.0" styleClass="menu-label" text="KEZDŐLAP" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="settingPane" layoutX="357.0" layoutY="60.0" prefHeight="650.0" prefWidth="1189.0" styleClass="pane-border" visible="false" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <HBox prefHeight="32.0" prefWidth="1198.0" AnchorPane.bottomAnchor="617.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="2500.0" styleClass="menu-label" text="BEÁLLÍTÁSOK" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="workerPane" styleClass="pane-border" visible="false" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <fx:include source="../worker/fxml/Worker.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
