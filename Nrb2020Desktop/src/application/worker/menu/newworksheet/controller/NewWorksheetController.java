@@ -10,9 +10,11 @@ import application.client.menu.client.database.ClientDataBase;
 import application.client.menu.client.pojo.Client;
 import application.setting.combobox.ComboBox;
 import application.setting.identification.Identification;
+import application.setting.popup.TooltipMessage;
 import application.worker.menu.newworksheet.database.WorksheetDataBase;
 import application.worker.menu.newworksheet.pojo.NewWorksheet;
 import javafx.beans.binding.Bindings;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -22,12 +24,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.Callback;
 
 public class NewWorksheetController implements Initializable {
 
@@ -41,6 +45,7 @@ public class NewWorksheetController implements Initializable {
 	private TableColumn<NewWorksheet, String> clientNameWork, worksheetNumber, worksheetStatus, worksheetBillable,
 			worksheetBillableData, worksheetComment;
 	private TableColumn<NewWorksheet, Date> worksheetStartDate, worksheetEndDate;
+	private TableColumn<NewWorksheet, Boolean> buttonCell;
 
 	@FXML
 	private Button saveButton, updateButton;
@@ -79,6 +84,25 @@ public class NewWorksheetController implements Initializable {
 	// client tabel
 	@SuppressWarnings("unchecked")
 	private void setWorksheetTableData() {
+
+		buttonCell = new TableColumn<>("");
+		buttonCell.setSortable(false);
+		buttonCell.setMinWidth(150);
+		buttonCell.setCellValueFactory(
+				new Callback<TableColumn.CellDataFeatures<NewWorksheet, Boolean>, ObservableValue<Boolean>>() {
+					@Override
+					public ObservableValue<Boolean> call(TableColumn.CellDataFeatures<NewWorksheet, Boolean> p) {
+						return new SimpleBooleanProperty(p.getValue() != null);
+					}
+				});
+
+		buttonCell.setCellFactory(new Callback<TableColumn<NewWorksheet, Boolean>, TableCell<NewWorksheet, Boolean>>() {
+			@Override
+			public TableCell<NewWorksheet, Boolean> call(TableColumn<NewWorksheet, Boolean> p) {
+				return new ButtonCell(worksheetTableView);
+			}
+		});
+
 		// Name column
 		worksheetId = new TableColumn<NewWorksheet, Integer>("ID");
 		worksheetId.setMinWidth(36);
@@ -172,8 +196,9 @@ public class NewWorksheetController implements Initializable {
 			}
 		});
 
-		worksheetTableView.getColumns().addAll(worksheetId, clientNameWork, worksheetNumber, worksheetStartDate,
-				worksheetEndDate, worksheetStatus, worksheetBillable, worksheetBillableData, worksheetComment);
+		worksheetTableView.getColumns().addAll( worksheetId, buttonCell, clientNameWork, worksheetNumber,
+				worksheetStartDate, worksheetEndDate, worksheetStatus, worksheetBillable, worksheetBillableData,
+				worksheetComment);
 
 	}
 
@@ -206,6 +231,7 @@ public class NewWorksheetController implements Initializable {
 
 	}
 
+	//Datum
 	private String localDate() {
 		String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
 		return date;
@@ -265,7 +291,8 @@ public class NewWorksheetController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		updateButton.setTooltip(new TooltipMessage("Adatok frissitése"));
+		saveButton.setTooltip(new TooltipMessage("Mentés adat"));
 	}
 
 }
